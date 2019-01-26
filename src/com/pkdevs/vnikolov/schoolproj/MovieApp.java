@@ -109,9 +109,10 @@ class MovieApp {
     private void enterNewMovie() {
         if(movieStore.size() < MAX_MOVIES){
             movieStore.add(ui.promptNewMovie());
+            start();
+            return;
         }
         ui.informLimitReached();
-        start();
     }
 
     private void exit() {
