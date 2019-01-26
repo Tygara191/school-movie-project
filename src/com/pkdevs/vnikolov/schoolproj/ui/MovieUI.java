@@ -40,7 +40,7 @@ public class MovieUI extends UserInterface {
                     ". " +
                     item.getValue().title);
         }
-        int i = promptIntegerSelection("Choose action: ");
+        int i = promptPositiveIntegerSelection("Choose action: ");
         if (mainMenu.containsKey(i)) {
             return mainMenu.get(i).command;
         } else {
@@ -72,7 +72,7 @@ public class MovieUI extends UserInterface {
      * @return License tax which is always user-input, cannot be blank or negative
      */
     private int promptLicenseTax() {
-        int licenseTax = promptIntegerSelection("License tax: ");
+        int licenseTax = promptPositiveIntegerSelection("License tax: ");
         return licenseTax > -1 ? licenseTax : promptLicenseTax();
     }
 
@@ -111,7 +111,7 @@ public class MovieUI extends UserInterface {
      * @return Year which is always user-input, cannot be blank or negative
      */
     private int promptYear() {
-        int year = promptIntegerSelection("Year: ");
+        int year = promptPositiveIntegerSelection("Year: ");
         return year > -1 ? year : promptYear();
     }
 

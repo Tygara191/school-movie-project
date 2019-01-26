@@ -14,13 +14,19 @@ import java.io.InputStreamReader;
  */
 public class UserInterface {
 
+    /**
+     * Clears cmd
+     */
     protected void clear() {
         try {
             new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
         } catch (InterruptedException | IOException ignored) {}
     }
 
-    protected int promptIntegerSelection(String message){
+    /**
+     * Prompts integer positive integer selection and returns -1 when an invalid int is passed
+     */
+    protected int promptPositiveIntegerSelection(String message){
         try {
             String in = promptStringInput(message);
             if(in != null){
@@ -30,6 +36,9 @@ public class UserInterface {
         return -1;
     }
 
+    /**
+     * Prompts the user to enter a string
+     */
     protected String promptStringInput(String message){
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.print(message);
