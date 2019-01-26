@@ -43,7 +43,8 @@ public class MovieStore extends ArrayList<Movie> {
     }
 
     /**
-     * Method to make a movieStore into a complete table with paddings n' shit
+     * Method to make a movieStore into a complete table with paddings n' shit.
+     * <br>
      * Probably the single ugliest piece of code i've written
      *
      * @return Formatted table of movies, ready to print out
