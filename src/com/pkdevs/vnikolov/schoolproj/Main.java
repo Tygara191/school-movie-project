@@ -11,10 +11,9 @@ import com.pkdevs.vnikolov.schoolproj.ui.MovieUI;
  */
 public class Main {
     public static void main(String... args){
-        MovieApp app = new MovieApp(
+        new MovieApp(
                 new MovieUI(),
                 new MovieStore()
-        );
-        app.start();
+        ).start();
     }
 }
